@@ -12,9 +12,10 @@
   
 
 ### Навыки и инструменты
-Exploratory Data Analysis  ·  Classification ·  algorithms Clustering ·  
-Python  ·  Pandas ·  NumPy  ·   SciPy  ·  Seaborn  ·  Scikit-learn ·  LogisticRegression  ·  RandomForest  ·  CatBoost  ·  KMeans  ·  Shap
+`Exploratory Data Analysis` ·  `Python`  ·  `Pandas` ·  `SciPy`  ·  `Seaborn`  ·  `Clustering`  `KMeans`  ·  `Shap`  
+`Scikit-learn` ·  `LogisticRegression`  ·  `RandomForest`  ·  `CatBoost`  
 
+### Результаты проекта
 Результатом EDA стал **портрет ушедшего клиента**:
 - Срок обслуживания `tenure` 1 - 4.7 лет
 - Относительно высокая ежемесячная плата `monthly_charges`
@@ -26,12 +27,11 @@ Python  ·  Pandas ·  NumPy  ·   SciPy  ·  Seaborn  ·  Scikit-learn ·  Logi
     - Контракт с годовыми типами оплаты `type`
 - Персональные характеристики: состоит в браке, имеет иждивенцев, пенсионер, любого пола.
 
-Выбранная **модель CatBoostClassifier** показала высокие **результаты** при тестировании:
-- ROC-AUC = 0.93  - соостветствует поставленному KPI
-- Есть переобучение, но обобщающая способность  достаточно высокая
+В качестве лучшей модели для предсказания выбран градиентный бустинг **CatBoostClassifier** с предобработкой данных StandardScaler, OrdinalEncoder. Результаты тестирования:
+- ROC-AUC = 0.93 
 - Ошибка в предсказании положительного класса (клиент уйдёт) - 20% и отрицательного (клиент останется) - 9%.
 
 **Анализ важности признаков модели** и их интерпретация показали:
 - Ключевой признак для предсказания ухода клиентся является `tenure` срок обслуживания. 
 - Дополняющие признаки - полная и ежемесячная трата `monthly_charges`, `total_charges`,  тип оплаты `type`
-- Менее важные, но с интерпретируемым влиянием на классы:  количество услуг `number_services`, способ оплаты `payment_method` , наличие партнёра `partner`, наличие пенсионного статуса `senior_sitizen`.
+- Менее важные, но с интерпретируемым влиянием на классы: количество услуг `number_services`, способ оплаты `payment_method` , наличие партнёра `partner`, наличие пенсионного статуса `senior_sitizen`.
