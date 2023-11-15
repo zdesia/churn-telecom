@@ -3,7 +3,7 @@
 
  # Analyzing and predicting customer churn in telecom company
 
-### Project Objective
+### Project objective
 To research and develop a machine learning model to predict customer churn in order to retain them with special offers.
 
 ### Data
