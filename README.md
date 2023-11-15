@@ -1,5 +1,5 @@
-<a id='RUS'></a>
-<a href="#ENG"><img src='https://img.shields.io/badge/ENG -Go to RUS description-blue'></a>
+<a id='ENG'></a>
+<a href="#RUS"><img src='https://img.shields.io/badge/ENG -Go to RUS description-blue'></a>
 
  # Analyzing and predicting customer churn in telecom company
 
